@@ -27,6 +27,8 @@ function get_tile_state() {
 
 turn = Turn.NOUGHTS;
 
+winner = TileState.EMPTY_ACTIVE;
+
 //The position of square (0, 0), gets updated by the square itself during Create event
 origin_x = 0;
 origin_y = 0;
@@ -54,6 +56,7 @@ minigames = [
 
 function reset_game_values() {
     global.turn = Turn.NOUGHTS;
+    global.winner = TileState.EMPTY_ACTIVE;
     global.squares = [
         undefined, undefined, undefined,    undefined, undefined, undefined,    undefined, undefined, undefined, 
         undefined, undefined, undefined,    undefined, undefined, undefined,    undefined, undefined, undefined, 
@@ -103,9 +106,11 @@ function square_clicked() {
     var _position_within_board = coord_x%3 + (coord_y%3)*3;
     
     
+    var _victor = check_game_over();
     
-    if(check_game_over()!=TileState.EMPTY_ACTIVE) {
-        //TODO handle various end game cases
+    if(_victor!=TileState.EMPTY_ACTIVE) {
+        global.winner = _victor;
+        room_goto(EndGameRoom);
         return;
     }
     

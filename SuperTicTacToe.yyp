@@ -29,7 +29,8 @@
     {"id":{"name":"obj_Button","path":"objects/obj_Button/obj_Button.yy",},},
     {"id":{"name":"obj_Game_2_players","path":"objects/obj_Game_2_players/obj_Game_2_players.yy",},},
     {"id":{"name":"obj_Square","path":"objects/obj_Square/obj_Square.yy",},},
-    {"id":{"name":"GameRoom","path":"rooms/GameRoom/GameRoom.yy",},},
+    {"id":{"name":"EndGameRoom","path":"rooms/EndGameRoom/EndGameRoom.yy",},},
+    {"id":{"name":"GameRoom2Player","path":"rooms/GameRoom2Player/GameRoom2Player.yy",},},
     {"id":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},},
     {"id":{"name":"GameLogic","path":"scripts/GameLogic/GameLogic.yy",},},
     {"id":{"name":"spr_Background","path":"sprites/spr_Background/spr_Background.yy",},},
@@ -43,7 +44,8 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},},
-    {"roomId":{"name":"GameRoom","path":"rooms/GameRoom/GameRoom.yy",},},
+    {"roomId":{"name":"GameRoom2Player","path":"rooms/GameRoom2Player/GameRoom2Player.yy",},},
+    {"roomId":{"name":"EndGameRoom","path":"rooms/EndGameRoom/EndGameRoom.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
