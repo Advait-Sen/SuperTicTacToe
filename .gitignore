@@ -60,3 +60,6 @@ Temporary Items
 
 # GMRT build directory
 Build
+
+# OperaGX publishing stuff
+options/operagx/options_operagx.yy
