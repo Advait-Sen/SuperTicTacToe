@@ -1,0 +1,1 @@
+//To override and cancel draw_self() call here, since we're drawing on the GUI layer
