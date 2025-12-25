@@ -110,6 +110,7 @@ function square_clicked() {
     
     if(_victor!=TileState.EMPTY_ACTIVE) {
         global.winner = _victor;
+        //TODO maybe show ending screen or smth?
         room_goto(EndGameRoom);
         return;
     }
@@ -212,6 +213,24 @@ function update_minigame_status(mg_index=0) {
     
     if(_mg_state != TileState.EMPTY_ACTIVE) {
         set_minigame_status(mg_index, false);
+        
+        var _decor_layer = layer_get_id("Decoration_Front");
+        var _sprite = layer_sprite_get_id(_decor_layer, $"game_backing_{mg_index}");
+        
+        layer_sprite_alpha(_sprite, 0.5);
+        switch (_mg_state) {
+        	case TileState.EMPTY_INACTIVE:
+                break;
+            
+            case TileState.CROSSES_ACTIVE:
+                layer_sprite_index(_sprite, 1);
+                break;
+            
+            case TileState.NOUGHTS_ACTIVE:
+                layer_sprite_index(_sprite, 2);
+                break;
+                
+        }
     }
     
     global.minigames[mg_index] = _mg_state;

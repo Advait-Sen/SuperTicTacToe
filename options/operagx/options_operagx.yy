@@ -17,7 +17,7 @@
   "option_operagx_mod_team_id":"",
   "option_operagx_mod_team_name":"",
   "option_operagx_mod_version":"1.0.0.0",
-  "option_operagx_next_version":"1.1.0.1",
+  "option_operagx_next_version":"1.2.0.0",
   "option_operagx_publicShareUrl":"",
   "option_operagx_scale":0,
   "option_operagx_team_id":"e1cbfd35-39f2-4973-a91e-375376039e6a",
